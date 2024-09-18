@@ -1,0 +1,158 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior:smooth ;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    height: 3em;
+    align-content: center;
+    margin-bottom: 1em;
+   position: fixed;
+   background:white;
+   width: 100%;
+}
+header h3 {
+padding: .7em 1em;
+}
+ul {
+    display: flex;
+    gap: 2.5em;
+    list-style: none;
+    padding-top: 1em;
+   
+}
+ul li {
+    /* color: rgba(0, 0, 0, .6); */
+    cursor: pointer;
+}
+ul li a:hover {
+    color: rgba(0, 0, 0, 1);
+}
+ul li a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, .6);
+    
+}
+section {
+    height: 100vh;
+    align-items: center;
+    text-align: center;
+    background: rgba(239, 239, 240, .7);
+    margin-bottom: .3em;
+}
+.clock {
+    font-size: 1.2em;
+}
+.center {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    padding-top: 50vh;
+    font-weight: 400;
+    font-size: 1.5em;
+}
+.div1 {
+    flex-direction: column;
+  align-items: center;
+}
+.circle {
+    
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    border: 1.5px solid rgba(239, 239, 240, 1);
+    background: rgba(171, 183, 183 ,.5);
+    
+    position: fixed;
+    z-index: 10;
+    bottom: 0;
+    backdrop-filter: blur(2px);
+    pointer-events: none;
+}
+ul li a.active {
+    color: rgba(0, 0, 0, 1);
+}
+.totop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1em;
+    font-size: 1.5em;
+    font-weight: 400;
+    width: 10em;
+    height: 10vh;
+    background: white;
+    position: fixed;
+    bottom: -10em;
+    left: 50%;
+    transform: translate(-50% , 0);
+    border-radius: 2em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    transition: .4s;
+    cursor: pointer;
+
+}
+.toup {
+bottom: 2em;
+}
+.loading-page {
+    position: fixed;
+    background: rgba(239, 239, 240, .7);
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 14;
+    backdrop-filter: blur(2px);
+    color: rgba(0, 0, 0, .6);
+    letter-spacing: 2px;
+
+}
+.loading-page h2 {
+    font-size: 3em;
+    font-weight: 600;
+   
+}
+.hidden_loader {
+animation: hidden_loader 2.5s 2s forwards;
+}
+.hidden_title {
+    animation: hidden_title 2s forwards ;
+}
+footer {
+    display: flex;
+    justify-content: center;
+    gap: .3em;
+    align-items: center;
+    height: 5vh;
+}
+
+@keyframes 
+hidden_title {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes 
+hidden_loader {
+0% {
+    height: 100vh;
+
+}
+100% {
+    height: 0;
+}
+}
